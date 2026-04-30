@@ -1,0 +1,10 @@
+{
+  "name": "qibo-root",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "cd server && npm start",
+    "dev": "cd client && npm run dev"
+  }
+}

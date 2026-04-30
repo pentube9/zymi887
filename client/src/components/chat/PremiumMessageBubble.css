@@ -1,0 +1,122 @@
+.zy-message-wrapper {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2px;
+  animation: zy-message-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.zy-message-wrapper.sent {
+  justify-content: flex-end;
+}
+
+.zy-message-wrapper.received {
+  justify-content: flex-start;
+}
+
+.zy-message-bubble {
+  max-width: 70%;
+  padding: var(--zy-space-3) var(--zy-space-4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--zy-space-1);
+  box-shadow: var(--zy-shadow-sm);
+}
+
+.zy-message-wrapper.sent .zy-message-bubble {
+  background: var(--zy-accent-gradient);
+  color: #fff;
+  border-radius: var(--zy-radius-lg) var(--zy-radius-lg) 4px var(--zy-radius-lg);
+}
+
+.zy-message-wrapper.received .zy-message-bubble {
+  background: var(--zy-surface-bg);
+  color: var(--zy-text-primary);
+  border-radius: var(--zy-radius-lg) var(--zy-radius-lg) var(--zy-radius-lg) 4px;
+  border: 1px solid var(--zy-glass-border);
+}
+
+.zy-message-content {
+  font-size: var(--zy-font-size-base);
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.zy-bubble-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--zy-space-2);
+  margin-top: 2px;
+}
+
+.zy-timestamp {
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.zy-status-ticks {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.zy-message-wrapper.received .zy-status-ticks {
+  display: none;
+}
+
+.zy-status-ticks.read {
+  color: #fff;
+}
+
+.zy-status.pending {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.zy-status.failed {
+  color: #ff4444;
+  font-size: 10px;
+}
+
+.zy-retry-btn {
+  background: var(--zy-error);
+  border: none;
+  border-radius: 6px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: all var(--zy-transition-fast);
+}
+
+.zy-retry-btn:hover {
+  transform: rotate(180deg);
+  background: #ff1a53;
+}
+
+@keyframes zy-message-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Group spacing */
+.zy-message-wrapper + .zy-message-wrapper {
+  margin-top: 2px;
+}
+
+.zy-message-wrapper.sent + .zy-message-wrapper.received,
+.zy-message-wrapper.received + .zy-message-wrapper.sent {
+  margin-top: var(--zy-space-4);
+}

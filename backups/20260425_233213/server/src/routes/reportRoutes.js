@@ -1,0 +1,72 @@
+import { createReport, getReports, resolveReport } from '../services/reportService.js';
+import { logAudit } from '../services/auditService.js';
+import { get } from '../db/database.js';
+
+export const reportMessage = (req, res) => {
+  const { messageId, reason } = req.body;
+
+  if (!messageId || !reason) {
+    return res.status(400).json({ error: 'Message ID and reason required' });
+  }
+
+  const result = createReport(messageId, req.user.id, reason);
+
+  if (result.success) {
+    logAudit(req.user.id, 'report_submitted', messageId, reason);
+    res.json({ success: true, id: result.id });
+  } else {
+    res.status(400).json({ error: result.error });
+  }
+};
+
+export const getAllReports = (req, res) => {
+  const reports = getReports('pending');
+  res.json(reports);
+};
+
+export const resolveMessageReport = (req, res) => {
+  const { reportId, action } = req.body;
+
+  if (!reportId || !action) {
+    return res.status(400).json({ error: 'Report ID and action required' });
+  }
+
+  // Fetch report to get message and reporter IDs for audit
+  const report = get('SELECT * FROM message_reports WHERE id = ?', reportId);
+  if (!report) {
+    return res.status(404).json({ error: 'Report not found' });
+  }
+
+  const extraData = {};
+
+  // For hide_message, ban_user, we need additional data from request
+  if (action === 'hide_message') {
+    extraData.messageId = report.message_id;
+  } else if (action === 'warn_user') {
+    extraData.userId = report.reporter_id;
+  } else if (action === 'ban_user') {
+    // Ban the message sender
+    extraData.userId = report.sender_id;
+  }
+
+  try {
+    resolveReport(reportId, req.adminUser.id, action, extraData);
+
+    // Audit logging
+    const details = `Resolved report #${reportId}: ${action}`;
+    logAudit(req.adminUser.id, 'report_resolved', reportId, details);
+
+    // Additional audit for specific actions
+    if (action === 'ban_user' && extraData.userId) {
+      logAudit(req.adminUser.id, 'user_banned_via_report', extraData.userId, `User banned due to report #${reportId}`);
+    }
+
+    if (action === 'hide_message' && extraData.messageId) {
+      logAudit(req.adminUser.id, 'message_hidden', extraData.messageId, `Message hidden due to report #${reportId}`);
+    }
+
+    res.json({ success: true });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+};

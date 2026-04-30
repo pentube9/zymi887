@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+.env
+.env.local
+*.log
+.DS_Store
+backups
+scripts
+*.db
+*.db-shm
+*.db-wal
+ovyo.db
+zymi.db
+dist
+coverage
+*.sqlite

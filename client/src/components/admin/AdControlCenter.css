@@ -1,0 +1,486 @@
+.zy-ad-control-container {
+  padding: 10px;
+}
+
+.zy-master-status {
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.zy-master-status.active {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+.zy-master-status.disabled {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.zy-ad-content {
+  margin-top: 24px;
+}
+
+.zy-control-card {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.zy-control-card label {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.zy-control-card input, .zy-control-card select {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 10px;
+  color: #fff;
+  outline: none;
+}
+
+.zy-networks-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.zy-network-card {
+  padding: 24px;
+}
+
+.zy-network-card .zy-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.zy-network-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--neon-primary);
+}
+
+.zy-admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.zy-admin-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zy-admin-form label {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.zy-admin-form input {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 12px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.zy-placement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.zy-placement-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 16px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--glass-border);
+}
+
+.zy-placement-card .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.zy-placement-card .key {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.zy-placement-card .status {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.zy-toggle-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: #64748b;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.zy-toggle-btn.active {
+  background: rgba(6, 182, 212, 0.2);
+  color: var(--neon-primary);
+  border-color: var(--neon-primary);
+}
+
+.zy-audit-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+}
+
+.zy-audit-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.zy-audit-table th, .zy-audit-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.zy-audit-table th {
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.zy-audit-table td {
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+.zy-badge-outline {
+  padding: 4px 10px;
+  border: 1px solid var(--neon-secondary);
+  border-radius: 6px;
+  color: var(--neon-secondary);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.zy-mini-code {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: #94a3b8;
+  max-width: 300px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.zy-admin-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--neon-primary);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+  z-index: 2000;
+  font-weight: 600;
+  cursor: pointer;
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.zy-badge.active {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* Policy and Preview Styles */
+.zy-policy-status-container {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.zy-policy-status-container h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: var(--neon-primary);
+}
+
+.zy-policy-alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.zy-policy-alert.critical {
+  background: rgba(239, 68, 68, 0.15);
+  border-left: 4px solid #ef4444;
+  color: #fca5a5;
+}
+
+.zy-policy-alert.warning {
+  background: rgba(245, 158, 11, 0.15);
+  border-left: 4px solid #f59e0b;
+  color: #fcd34d;
+}
+
+.zy-policy-alert.notice {
+  background: rgba(139, 92, 246, 0.15);
+  border-left: 4px solid #8b5cf6;
+  color: #c4b5fd;
+}
+
+.zy-policy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.zy-policy-list li {
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+.zy-policy-list .safe {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.zy-policy-list .notice {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.zy-policy-list .warning {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.zy-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.zy-ad-preview-slot {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.zy-ad-preview-slot.interstitial {
+  height: 200px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(139, 92, 246, 0.05));
+}
+
+.zy-ad-preview-slot.banner {
+  height: 80px;
+}
+
+.zy-ad-preview-slot.native {
+  height: 140px;
+}
+
+.zy-ad-preview-slot.rewarded {
+  height: 200px;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.zy-ad-preview-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.zy-ad-preview-label .icon {
+  font-size: 24px;
+}
+
+.zy-ad-preview-label .text {
+  font-size: 12px;
+  font-weight: 700;
+  color: #e2e8f0;
+  letter-spacing: 0.5px;
+}
+
+.zy-ad-preview-network {
+  font-size: 10px;
+  color: #64748b;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Audit & Error Enhancements */
+.zy-badge-risk {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.zy-badge-risk.high { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+.zy-badge-risk.medium { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+.zy-badge-risk.low { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+
+.zy-audit-diff {
+  font-size: 11px;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 300px;
+}
+
+.zy-audit-diff .old { color: #94a3b8; text-decoration: line-through; }
+.zy-audit-diff .new { color: #e2e8f0; }
+
+.zy-error-card {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 24px;
+}
+
+/* Contract Styles */
+.zy-contract-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.zy-contract-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.zy-contract-card h3 {
+  margin-top: 0;
+  font-size: 15px;
+  color: var(--neon-primary);
+  margin-bottom: 12px;
+}
+
+.zy-contract-card ul {
+  padding-left: 20px;
+  margin: 0;
+  font-size: 13px;
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.zy-error-card h3 {
+  margin: 0 0 8px 0;
+  color: #ef4444;
+}
+
+.zy-error-card p {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.zy-error-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.zy-retry-btn {
+  background: var(--neon-primary);
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.zy-error-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.zy-diag-link {
+  color: #64748b;
+  font-size: 11px;
+  text-decoration: none;
+  transition: all 0.2s;
+  padding: 4px 12px;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  background: rgba(30, 41, 59, 0.5);
+}
+
+.zy-diag-link:hover {
+  color: var(--neon-primary);
+  border-color: var(--neon-primary);
+  background: rgba(var(--neon-primary-rgb), 0.1);
+}

@@ -1,0 +1,168 @@
+.zy-admin-governance-page {
+  padding: var(--zy-space-8);
+  max-width: 1400px;
+  margin: 0 auto;
+  color: var(--zy-text-primary);
+}
+
+.zy-admin-header {
+  margin-bottom: var(--zy-space-8);
+}
+
+.zy-admin-header h1 {
+  font-size: var(--zy-font-size-2xl);
+  font-weight: 800;
+  margin-bottom: var(--zy-space-6);
+  background: var(--zy-accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.zy-admin-nav-tabs {
+  display: flex;
+  gap: var(--zy-space-4);
+  border-bottom: 1px solid var(--zy-glass-border);
+  padding-bottom: var(--zy-space-4);
+}
+
+.zy-admin-tab {
+  background: none;
+  border: none;
+  color: var(--zy-text-secondary);
+  font-size: var(--zy-font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  padding: var(--zy-space-2) var(--zy-space-4);
+  border-radius: var(--zy-radius-md);
+  transition: all var(--zy-transition-fast);
+}
+
+.zy-admin-tab.active {
+  background: var(--zy-glass-bg);
+  color: var(--zy-accent-primary);
+}
+
+.zy-admin-card {
+  padding: var(--zy-space-6);
+  border-radius: var(--zy-radius-xl);
+  margin-bottom: var(--zy-space-6);
+}
+
+.zy-card-header {
+  margin-bottom: var(--zy-space-6);
+}
+
+.zy-card-header h3 {
+  font-size: var(--zy-font-size-xl);
+  margin-bottom: 4px;
+}
+
+.zy-card-header p {
+  color: var(--zy-text-muted);
+  font-size: var(--zy-font-size-sm);
+}
+
+/* Form Styles */
+.zy-admin-form {
+  background: rgba(255, 255, 255, 0.03);
+  padding: var(--zy-space-6);
+  border-radius: var(--zy-radius-lg);
+  margin-bottom: var(--zy-space-8);
+  border: 1px solid var(--zy-glass-border);
+}
+
+.zy-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--zy-space-4);
+  margin-bottom: var(--zy-space-4);
+}
+
+.zy-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--zy-space-2);
+  margin-bottom: var(--zy-space-4);
+}
+
+.zy-form-group label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--zy-text-muted);
+}
+
+.zy-form-group input,
+.zy-form-group select {
+  background: var(--zy-surface-bg);
+  border: 1px solid var(--zy-glass-border);
+  color: #fff;
+  padding: var(--zy-space-3);
+  border-radius: var(--zy-radius-md);
+  font-size: var(--zy-font-size-base);
+}
+
+/* Table Styles */
+.zy-admin-table-container {
+  overflow-x: auto;
+}
+
+.zy-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.zy-admin-table th {
+  padding: var(--zy-space-4);
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--zy-text-muted);
+  border-bottom: 1px solid var(--zy-glass-border);
+}
+
+.zy-admin-table td {
+  padding: var(--zy-space-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: var(--zy-font-size-sm);
+}
+
+.zy-feature-key {
+  font-family: monospace;
+  color: var(--zy-accent-primary);
+  font-weight: 600;
+}
+
+.zy-status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.zy-status-badge.active { background: rgba(52, 199, 89, 0.15); color: #34c759; }
+.zy-status-badge.inactive { background: rgba(255, 59, 48, 0.15); color: #ff3b30; }
+
+.zy-admin-btn {
+  padding: 8px 16px;
+  border-radius: var(--zy-radius-md);
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--zy-transition-fast);
+}
+
+.zy-admin-btn.success { background: var(--zy-accent-primary); color: #000; }
+.zy-admin-btn.danger { background: var(--zy-error); color: #fff; }
+
+.zy-admin-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.zy-details-cell {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--zy-text-muted);
+}

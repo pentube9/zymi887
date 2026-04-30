@@ -1,0 +1,112 @@
+.zy-premium-message-list {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--zy-primary-bg);
+  padding: var(--zy-space-4) var(--zy-space-6);
+  display: flex;
+  flex-direction: column;
+}
+
+.zy-messages-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--zy-space-2);
+}
+
+.zy-date-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--zy-space-4);
+  margin: var(--zy-space-6) 0;
+  padding: 0 var(--zy-space-10);
+}
+
+.zy-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--zy-glass-border), transparent);
+}
+
+.zy-date-text {
+  font-size: var(--zy-font-size-xs);
+  color: var(--zy-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.zy-typing-indicator-container {
+  margin: var(--zy-space-4) 0;
+  align-self: flex-start;
+  animation: zy-slide-up 0.3s ease-out;
+}
+
+.zy-typing-bubble {
+  background: var(--zy-surface-bg);
+  border: 1px solid var(--zy-glass-border);
+  padding: var(--zy-space-2) var(--zy-space-4);
+  border-radius: var(--zy-radius-md) var(--zy-radius-md) var(--zy-radius-md) 4px;
+  display: flex;
+  align-items: center;
+  gap: var(--zy-space-3);
+  box-shadow: var(--zy-shadow-sm);
+}
+
+.zy-typing-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.zy-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--zy-accent-primary);
+  border-radius: var(--zy-radius-full);
+  animation: zy-typing-bounce 1s infinite;
+}
+
+.zy-dot:nth-child(2) { animation-delay: 0.2s; }
+.zy-dot:nth-child(3) { animation-delay: 0.4s; }
+
+.zy-typing-label {
+  font-size: var(--zy-font-size-xs);
+  color: var(--zy-text-secondary);
+  font-weight: 500;
+}
+
+.zy-messages-bottom-spacer {
+  height: var(--zy-space-4);
+  flex-shrink: 0;
+}
+
+@keyframes zy-typing-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-4px); opacity: 1; }
+}
+
+@keyframes zy-slide-up {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Scrollbar styling for message list */
+.zy-premium-message-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.zy-premium-message-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.zy-premium-message-list::-webkit-scrollbar-thumb {
+  background: var(--zy-glass-border);
+  border-radius: var(--zy-radius-full);
+}
+
+.zy-premium-message-list::-webkit-scrollbar-thumb:hover {
+  background: var(--zy-text-muted);
+}

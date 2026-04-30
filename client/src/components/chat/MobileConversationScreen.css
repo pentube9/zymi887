@@ -1,0 +1,57 @@
+.zy-mobile-conversation {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--zy-primary-bg);
+  z-index: var(--zy-z-overlay);
+  overflow: hidden;
+}
+
+.zy-mobile-conv-header {
+  padding-top: var(--zy-safe-top);
+  background: var(--zy-glass-bg);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--zy-glass-border);
+}
+
+.zy-mobile-conv-messages {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Customizing list for mobile full-screen */
+.zy-mobile-conv-messages .zy-premium-message-list {
+  padding: var(--zy-space-4);
+}
+
+.zy-mobile-conv-composer {
+  background: var(--zy-glass-bg);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--zy-glass-border);
+  padding-bottom: var(--zy-safe-bottom);
+}
+
+.zy-mobile-safe-bottom {
+  height: var(--zy-safe-bottom);
+}
+
+/* Overriding header for mobile to ensure back button and full width */
+.zy-mobile-conv-header .zy-premium-chat-header {
+  height: 70px;
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .zy-mobile-conv-header .zy-header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+  }
+  
+  .zy-mobile-conv-header .zy-header-name {
+    font-size: var(--zy-font-size-base);
+  }
+}

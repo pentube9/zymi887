@@ -1,0 +1,6 @@
+# SSL certificates directory
+# Place your production SSL certificate files here:
+# - cert.pem (SSL certificate)
+# - key.pem (private key)
+#
+# These files are mounted into the nginx container for HTTPS

@@ -1,0 +1,12 @@
+.mobile-chat-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0f172a;
+}
+
+@media (min-width: 769px) {
+  .mobile-chat-layout {
+    display: none;
+  }
+}

@@ -1,0 +1,144 @@
+.zymi-premium-app {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--zy-primary-bg);
+  position: relative;
+}
+
+.zy-chat-shell {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.zy-sidebar-column {
+  width: var(--zy-sidebar-width);
+  flex-shrink: 0;
+  border-right: 1px solid var(--zy-glass-border);
+  transition: width var(--zy-transition-normal);
+}
+
+.zy-chat-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.zy-profile-column {
+  width: 320px;
+  flex-shrink: 0;
+  background: var(--zy-surface-bg);
+  border-left: 1px solid var(--zy-glass-border);
+  transition: transform var(--zy-transition-normal);
+}
+
+/* BREAKPOINTS */
+
+/* 2-Column Mode: Hide Profile Panel below 1200px */
+@media (max-width: 1200px) {
+  .zy-profile-column {
+    display: none !important;
+  }
+}
+
+/* Tablet Transition: Compact Sidebar */
+@media (max-width: 1024px) {
+  :root {
+    --zy-sidebar-width: 320px;
+  }
+}
+
+/* Mobile/Tablet Fallback: Force Layout protection */
+@media (max-width: 900px) {
+  .zymi-premium-app {
+    overflow-x: hidden;
+  }
+}
+
+/* Full Mobile UI Layout */
+@media (max-width: 768px) {
+  .zymi-premium-app {
+    height: 100dvh;
+    width: 100vw;
+  }
+
+  .zy-chat-shell.desktop {
+    display: none !important;
+  }
+
+  .zy-chat-shell.mobile {
+    display: flex !important;
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .zy-sidebar-column,
+  .zy-profile-column {
+    display: none !important;
+  }
+}
+
+/* Small Mobile optimization */
+@media (max-width: 640px) {
+  .zy-mobile-content {
+    padding-bottom: 80px;
+  }
+}
+
+.zy-mobile-chat-view,
+.zy-mobile-home-view {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.zy-mobile-message-area,
+.zy-message-area {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.zy-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--zy-text-secondary);
+  background: var(--zy-primary-bg);
+  text-align: center;
+  padding: var(--zy-space-8);
+  gap: var(--zy-space-2);
+}
+
+.zy-empty-title {
+  font-size: var(--zy-font-size-lg);
+  font-weight: 600;
+  color: var(--zy-text-primary);
+}
+
+.zy-empty-subtitle {
+  font-size: var(--zy-font-size-base);
+  opacity: 0.6;
+}
+
+.zy-empty-state::before {
+  content: '💬';
+  font-size: 64px;
+  opacity: 0.2;
+  margin-bottom: var(--zy-space-4);
+}

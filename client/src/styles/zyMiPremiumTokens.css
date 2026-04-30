@@ -1,0 +1,94 @@
+/* ZYMI Premium UI Design Tokens - Google Stitch Approved */
+
+:root {
+  /* Colors - Deep Dark Premium Theme */
+  --zy-primary-bg: #050508;
+  --zy-secondary-bg: #0a0a0f;
+  --zy-surface-bg: #14141d;
+  --zy-glass-bg: rgba(20, 20, 29, 0.7);
+  --zy-glass-border: rgba(255, 255, 255, 0.08);
+  --zy-glass-hover: rgba(255, 255, 255, 0.05);
+  
+  --zy-accent-primary: #00f2ff; /* Cyber Cyan */
+  --zy-accent-secondary: #7000ff; /* Electric Purple */
+  --zy-accent-gradient: linear-gradient(135deg, #00f2ff, #7000ff);
+  
+  --zy-text-primary: #f8fafc;
+  --zy-text-secondary: #94a3b8;
+  --zy-text-muted: #64748b;
+  
+  --zy-success: #00ffaa;
+  --zy-warning: #ffcc00;
+  --zy-error: #ff3366;
+  
+  --zy-online: #00ffaa;
+  --zy-typing: #00f2ff;
+  --zy-unread: #00f2ff; /* Matching accent */
+
+  /* Spacing Scale */
+  --zy-space-1: 4px;
+  --zy-space-2: 8px;
+  --zy-space-3: 12px;
+  --zy-space-4: 16px;
+  --zy-space-5: 20px;
+  --zy-space-6: 24px;
+  --zy-space-7: 32px;
+  --zy-space-8: 40px;
+  --zy-space-10: 60px;
+
+  /* Border Radius */
+  --zy-radius-sm: 8px;
+  --zy-radius-md: 14px;
+  --zy-radius-lg: 20px;
+  --zy-radius-xl: 28px;
+  --zy-radius-full: 9999px;
+
+  /* Shadows - Layered Elevation */
+  --zy-shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --zy-shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --zy-shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.7);
+  --zy-shadow-accent: 0 0 20px rgba(0, 242, 255, 0.15);
+
+  /* Typography */
+  --zy-font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+  --zy-font-size-xs: 11px;
+  --zy-font-size-sm: 13px;
+  --zy-font-size-base: 15px;
+  --zy-font-size-lg: 18px;
+  --zy-font-size-xl: 22px;
+  --zy-font-size-2xl: 32px;
+
+  /* Transitions */
+  --zy-transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --zy-transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --zy-transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Component Layout */
+  --zy-sidebar-width: 380px;
+  --zy-header-height: 80px;
+  --zy-composer-min-height: 80px;
+
+  /* Mobile Safe Areas */
+  --zy-safe-top: env(safe-area-inset-top, 0px);
+  --zy-safe-bottom: env(safe-area-inset-bottom, 0px);
+  
+  /* Touch Targets */
+  --zy-touch-target: 48px;
+  
+  /* Calling UI Colors */
+  --zy-call-bg: #050508;
+  --zy-call-danger: #ff3b30;
+  --zy-call-success: #34c759;
+  
+  /* Media Card Tokens */
+  --zy-media-max-width: 320px;
+  --zy-media-radius: var(--zy-radius-lg);
+  
+  /* Z-index layers */
+  --zy-z-base: 1;
+  --zy-z-sticky: 10;
+  --zy-z-fixed: 50;
+  --zy-z-overlay: 100;
+  --zy-z-modal: 1000;
+  --zy-z-call: 2000;
+}

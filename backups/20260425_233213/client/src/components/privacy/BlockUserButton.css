@@ -1,0 +1,54 @@
+.block-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.block-btn:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.block-btn.unblocked {
+  background: rgba(52, 211, 153, 0.15);
+  border-color: rgba(52, 211, 153, 0.3);
+  color: #34d399;
+}
+
+.block-btn.unblocked:hover {
+  background: rgba(52, 211, 153, 0.25);
+}
+
+.block-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.block-confirm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.block-btn.confirm-yes {
+  background: rgba(239, 68, 68, 0.3);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: #f87171;
+}
+
+.block-btn.confirm-no {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+}
