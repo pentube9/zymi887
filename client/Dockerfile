@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 
-FROM nginx:alpine
+FROM nginx:1.30.0-alpine3.23-slim
 
 # Support running as non-root
 RUN touch /var/run/nginx.pid && \
